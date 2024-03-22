@@ -14,7 +14,7 @@ export default function BlogPostTile({blogPost}){
         {
           blogPost.blogImageUrl != '-' &&
           <div className='imageTileContainer'>
-            <img className='itemImageTile' src={`http://localhost:8080/${blogPost.blogImageUrl}`}></img>
+            <img className='itemImageTile' src={`https://pseudo-blog.adaptable.app/${blogPost.blogImageUrl}`}></img>
           </div>
         }
         <div className='textTileContainer'>

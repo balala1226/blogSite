@@ -38,7 +38,7 @@ export default function LogIn({setAuthenticated, setCurrentUser}){
    const formData = JSON.stringify(data);
    try {
      const req = await fetch(
-       'http://localhost:8080/api/login',
+       'https://pseudo-blog.adaptable.app/api/login',
        {
          method: 'post',
          body: formData,

@@ -30,8 +30,8 @@ export default function CommentForm({blogPost, setBlogPost, isNewComment, curren
     const { register, handleSubmit, reset, formState } = useForm(formOptions);
     const { errors } = formState;
 
-    const createCommentApi = 'http://localhost:8080/api/create_comment';
-    const updateCommentApi = 'http://localhost:8080/api/update_comment/';
+    const createCommentApi = 'https://pseudo-blog.adaptable.app/api/create_comment';
+    const updateCommentApi = 'https://pseudo-blog.adaptable.app/api/update_comment/';
 
     const submitForm = async (data, e) => {
         try {

@@ -29,7 +29,7 @@ export default function SignUp(){
    const formData = JSON.stringify(data);
    try {
      const req = await fetch(
-       'http://localhost:8080/api/signup',
+       'https://pseudo-blog.adaptable.app/api/signup',
        {
          method: 'post',
          body: formData,

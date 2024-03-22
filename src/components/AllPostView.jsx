@@ -15,7 +15,7 @@ export default function AllPostView(){
   },[]);
 
   const fetchAllBlogPostData = async() =>{
-    const req = await fetch('http://localhost:8080/api/all_blogs');
+    const req = await fetch('https://pseudo-blog.adaptable.app/api/all_blogs');
     
     if(!req){
       return;

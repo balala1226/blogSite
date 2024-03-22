@@ -22,14 +22,14 @@ export default function BlogPostView({authenticated, currentUser}){
   const [blogPost, setBlogPost] = useState(new BlogPostModel());
 
   const {id} = useParams();
-  const deleteApi = 'http://localhost:8080/api/delete_blog/';
+  const deleteApi = 'https://pseudo-blog.adaptable.app/api/delete_blog/';
   
   useEffect(() => {
     fetchBlogPostData();
   },[]);
 
   const fetchBlogPostData = async() => {
-    const req = await fetch(`http://localhost:8080/api/get_blog/${id}`);
+    const req = await fetch(`https://pseudo-blog.adaptable.app/api/get_blog/${id}`);
     
     if(!req){
       return;
@@ -110,7 +110,7 @@ export default function BlogPostView({authenticated, currentUser}){
             {
               blogPost.blogImageUrl != '-' &&
               <div className='postImageContainer'>
-                <img className='postImage' src={`http://localhost:8080/${blogPost.blogImageUrl}`}></img>
+                <img className='postImage' src={`https://pseudo-blog.adaptable.app/${blogPost.blogImageUrl}`}></img>
               </div>
             }
             <div className='postContentContainer'>

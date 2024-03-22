@@ -36,8 +36,8 @@ export default function BlogPostForm({blogPost, setBlogPost, formEditDone, curre
     const { register, handleSubmit, reset, formState } = useForm(formOptions);
     const { errors } = formState;
 
-    const createPostApi = 'http://localhost:8080/api/create_blog';
-    const updatePostApi = 'http://localhost:8080/api/update_blog/';
+    const createPostApi = 'https://pseudo-blog.adaptable.app/api/create_blog';
+    const updatePostApi = 'https://pseudo-blog.adaptable.app/api/update_blog/';
 
     const submitForm = async (data, e) => {
         var formData = new FormData();

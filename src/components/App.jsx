@@ -47,7 +47,7 @@ export default function App(){
       return new UserModel();
     }
 
-    const req = await fetch(`http://localhost:8080/api/get_user/${id}`);
+    const req = await fetch(`https://pseudo-blog.adaptable.app/api/get_user/${id}`);
     
     if(!req){
       return new UserModel();
