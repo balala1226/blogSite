@@ -1,0 +1,50 @@
+
+/* Media Query for Mobile Devices */
+@media (max-width: 800px) {
+    .homeContent{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-top: 2%;
+    }
+
+    .homeImageContainer{
+        width: 100%;
+    }
+
+    .homeImage{
+        max-width: 100%;
+    }
+}
+
+/* Media Query for desktop */
+@media (min-width: 801px) {
+    .homeContent{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-top: 2%;
+    }
+
+    .homeImageContainer{
+        width: 60vw;
+        height: 80vh;
+    }
+
+    .homeImage{
+        max-height: 100%;
+    } 
+}
+
+.homeContentGroup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
