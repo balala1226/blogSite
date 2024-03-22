@@ -1,0 +1,10 @@
+.content{
+    display: flex;
+    width: 96%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    min-height: 80vh;
+}

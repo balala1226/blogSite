@@ -1,0 +1,43 @@
+.registerLink{
+    font-weight:bold;
+    color:  rgb(238, 130, 238);
+    text-decoration: none;
+}
+.registerLink:hover{
+    color: rgb(0, 195, 255)
+}
+
+.logInItem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 80vh;
+    width: 100%;
+    gap: 2vh;
+}
+
+.logInFormContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1vh;
+    width: 100%;
+}
+
+.logInInput{
+    width: 50%;
+}
+
+.logInButton{
+    width: 50%;
+    background-color: rgb(238, 130, 238);
+    border: transparent;
+    border-radius: 5px;
+    height: 4vh;
+}
+.logInButton:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px black;
+}

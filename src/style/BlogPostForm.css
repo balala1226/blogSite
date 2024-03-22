@@ -1,0 +1,22 @@
+.blogPostFormContainer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.blogPostFormContainer label{
+    text-align: left;
+}
+
+.editFormButtonContainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.publishCheckbox:hover{
+    cursor:pointer;
+}

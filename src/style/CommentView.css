@@ -1,0 +1,14 @@
+.commentContainer{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2%;
+    text-align: left;
+}
+
+.commenter{
+    font-weight: 500;
+}
+
+.commentDate{
+    font-size: calc(10px + 0.5vw);
+}
