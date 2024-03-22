@@ -110,7 +110,7 @@ export default function BlogPostView({authenticated, currentUser}){
             {
               blogPost.blogImageUrl != '-' &&
               <div className='postImageContainer'>
-                <img className='postImage' src={`https://pseudo-blog.adaptable.app/${blogPost.blogImageUrl}`}></img>
+                <img className='postImage' src={blogPost.blogImageUrl}></img>
               </div>
             }
             <div className='postContentContainer'>

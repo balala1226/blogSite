@@ -20,6 +20,21 @@ export default function BlogPostForm({blogPost, setBlogPost, formEditDone, curre
     const [errorMessage, setErrorMessage] = useState('')
     const [blogImage, setBlogImage] = useState()
 
+    const convertBase64 = (file) => {
+        return new Promise((resolve, reject) => {
+            const fileReader = new FileReader();
+            fileReader.readAsDataURL(file);
+        
+            fileReader.onload = () => {
+                resolve(fileReader.result);
+            };
+        
+            fileReader.onerror = (error) => {
+                reject(error);
+            };
+        });
+    };
+
     const validationSchema = Yup.object().shape({
         title: Yup.string()
             .required('Username is required')
@@ -40,12 +55,20 @@ export default function BlogPostForm({blogPost, setBlogPost, formEditDone, curre
     const updatePostApi = 'https://pseudo-blog.adaptable.app/api/update_blog/';
 
     const submitForm = async (data, e) => {
-        var formData = new FormData();
-        formData.append('title', data.title);
-        formData.append('content', data.content);
-        formData.append('isPublished', data.isPublished);
-        formData.append('userId', data.userId);
-        formData.append('blogImage', blogImage);
+        var imageBase64 = '';
+        if (blogImage){
+            imageBase64 = await convertBase64(blogImage);
+        }
+        
+        const newData = {
+            title: data.title,
+            content: data.content,
+            isPublished: data.isPublished,
+            userId: data.userId,
+            blogImage: imageBase64
+        }
+
+        const formData = JSON.stringify(newData);
 
         const bearerToken = `Bearer ${currentUser.token}`
 
@@ -64,8 +87,8 @@ export default function BlogPostForm({blogPost, setBlogPost, formEditDone, curre
                 apiToUse,
                 {
                     method: method,
-                    mode: 'cors',
                     headers: {
+                        'Content-Type': 'application/json',
                         'Authorization': bearerToken,
                     },
                     body: formData,
